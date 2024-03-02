@@ -1,1 +1,1 @@
-from .zedub_config import Config
+from .zeub_config import Config
