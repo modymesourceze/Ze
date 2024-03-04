@@ -134,10 +134,10 @@ async def mybot(): #Code by T.me/zzzzl1l
     Malath = bot.uid
     mo_dy = f"[{MODY}](tg://user?id={Malath})"
     f"ـ {mo_dy}"
-    f"•⎆┊هــذا البــوت خــاص بـ {mo_dy} يمكـنك التواصــل معـه هـنا 🧸♥️"
-    zilbot = await zeub.tgbot.get_me()
-    bot_name = zilbot.first_name
-    botname = f"@{zilbot.username}"
+    f"•➥┊هــذا البــوت خــاص بـ {mo_dy} يمكـنك التواصــل معـه هـنا 🧸♥️"
+    mobot = await zeub.tgbot.get_me()
+    bot_name = mobot.first_name
+    botname = f"@{mobot.username}"
     if bot_name.startswith("مسـاعـد"):
         print("تم تشغيل البوت بنجــاح")
     else:
@@ -170,7 +170,7 @@ async def mybot(): #Code by T.me/zzzzl1l
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_message("@BotFather", f"•⎆┊انـا البــوت المسـاعـد الخــاص بـ {mo_dy} \n•⎆┊بـواسطـتـي يمكـنك التواصــل مـع مـالكـي 🧸♥️\n•⎆┊قنـاة السـورس 🌐 @source_ze 🌐")
+            await bot.send_message("@BotFather", f"•➥┊انـا البــوت المسـاعـد الخــاص بـ {mo_dy} \n•➥┊بـواسطـتـي يمكـنك التواصــل مـع مـالكـي 🧸♥️\n•➥┊قنـاة السـورس 🌐 @source_ze 🌐")
         except Exception as e:
             print(e)
 
@@ -187,8 +187,8 @@ async def startupmessage():
         if BOTLOG:
             Config.ZEUBLOGO = await zeub.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/f821d27af168206b472ad.mp4",
-                caption="**•⎆┊تـم بـدء تشغـيل سـورس زد إي الخاص بك .. بنجاح 🧸♥️**",
+                "https://telegra.ph/file/363839ab87f0c4689a0db.jpg",
+                caption="**•➥┊تـم بـدء تشغـيل سـورس زد إي الخاص بك .. بنجاح 🧸♥️**",
                 buttons=[(Button.url("🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱", "https://t.me/source_ze"),)],
             )
     except Exception as e:
@@ -205,7 +205,7 @@ async def startupmessage():
         if msg_details:
             await zeub.check_testcases()
             message = await zeub.get_messages(msg_details[0], ids=msg_details[1])
-            text = message.text + "\n\n**•⎆┊تـم اعـادة تشغيـل السـورس بنجــاح 🧸♥️**"
+            text = message.text + "\n\n**•➥┊تـم اعـادة تشغيـل السـورس بنجــاح 🧸♥️**"
             await zeub.edit_message(msg_details[0], msg_details[1], text)
             if gvarstatus("restartupdate") is not None:
                 await zeub.send_message(
@@ -349,7 +349,7 @@ async def verifyLoggerGroup():
         descript = "لا تقم بحذف هذه المجموعة أو التغيير إلى مجموعة عامه (وظيفتهـا تخزيـن كـل سجـلات وعمليـات البـوت.)"
         photoze = await zeub.upload_file(file="ze/malath/Zpic.jpg")
         _, groupid = await create_supergroup(
-            "كـروب السجـل زدثـــون", zeub, Config.TG_BOT_USERNAME, descript, photoze
+            "كـروب السجـل زد إي", zeub, Config.TG_BOT_USERNAME, descript, photoze
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print(
