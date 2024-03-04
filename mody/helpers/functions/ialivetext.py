@@ -83,7 +83,7 @@ async def zealive(StartTime):
         dyno = f"{AppHours}h {AppMinutes}m/{hours}h {minutes}m"
     except Exception as e:
         dyno = e
-    return f"🖤༄ ZThon Stats ༄🖤\
+    return f"🖤༄ Ze Stats ༄🖤\
                  \n\nღ Database : {check_sgnirts}\
                   \nღ Sudo : {sudo}\
                   \nღ Uptime : {uptime}\
